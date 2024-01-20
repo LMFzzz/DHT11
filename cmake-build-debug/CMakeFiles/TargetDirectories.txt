@@ -1,0 +1,3 @@
+D:/STM32Project/DHT11/cmake-build-debug/CMakeFiles/DHT11.elf.dir
+D:/STM32Project/DHT11/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/STM32Project/DHT11/cmake-build-debug/CMakeFiles/rebuild_cache.dir
