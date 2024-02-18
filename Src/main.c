@@ -28,7 +28,6 @@
 #include "stdio.h"
 #include "string.h"
 #include "dht11.h"
-#include "bh1750.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -73,8 +72,6 @@ int main(void)
     uint8_t hum = 1;
     char *CntState = "NO Connect!\r\n";
     uint8_t aTxBuffer[50];
-    uint32_t CO2Data, TVOCData;
-    uint32_t SGP30Dat;
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -100,7 +97,6 @@ int main(void)
   MX_I2C1_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-    Init_BH1750();
     DHT11_Reset();
     while (DHT11_Check())
     {
@@ -116,9 +112,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
     while (1) {
         DHT11_Read_Data(&hum,&temp);
-//        sprintf(aTxBuffer,"temp:%d ¡æ,hum:%d %% ,LIGHT: %d \r\n",temp,hum,Value_GY30());
-//        HAL_UART_Transmit(&huart1,aTxBuffer, strlen((const char *)aTxBuffer),200);
-        printf("Temp:%d ¡æ\r\n,Hum:%d %\r\n,light:%d\r\n",temp,hum,Value_GY30());
+        printf("Temp:%d Â¡Ã¦\r\n,Hum:%d %\r\n,temp,hum);
         HAL_Delay(500);
     /* USER CODE END WHILE */
 
